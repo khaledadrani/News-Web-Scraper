@@ -1,6 +1,6 @@
 # scraper_mosaique
 
-A simple python API that scrapes contents of articles from the Tunisian Mosaique fm Website. 
+A simple python API that scrapes articles from the Tunisian Mosaique fm Website. 
 
 ## Usage
 
