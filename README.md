@@ -14,7 +14,7 @@ By the end of execution, you will find the two scraped content in two csv files,
 
 
 ## What's next
-I'll try to improve the code from time to time. I'll work also on a way to add a column describing the 'type' of the extratced article in the output files.
-
+This code will be improved from time to time.
+Will add dependencies' management in future commits.
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
