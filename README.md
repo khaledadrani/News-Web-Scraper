@@ -1,4 +1,4 @@
-# scraper_mosaique
+# A scraper for mosaique fm
 
 A simple python API that scrapes articles from the Tunisian Mosaique fm Website. 
 
