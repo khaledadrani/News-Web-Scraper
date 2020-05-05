@@ -11,7 +11,7 @@ def get_soup(lang):
     req = Request(site,headers=hdr)
     page = urlopen(req)
     soup = BeautifulSoup(page,features="html.parser")
-    print(lang.upper()+' title: '+str(soup.title.text))
+    #print(lang.upper()+' title: '+str(soup.title.text))
     return soup
 
 
@@ -71,7 +71,7 @@ def scrape_articles(jamil):
     
     for j in jamil:
         content = scrape_article(j[0]['link'])
-        print( u'done : '+j[0]['title'])
+        #print( u'done : '+j[0]['title'])
         final.append({"link": j[0]['link'], "title": j[0]['title'], "type": j[1], "content": content[0].text})
     
     return final
@@ -94,18 +94,21 @@ def log_lang(lang):
 def scrape_it():
     """ Pipeline of scrapper_mosaique.Done.
     """
+    print('Job begins.')
     langs = ['ar','fr']
     for lang in langs:
+        
         soup = get_soup(lang)
-        log_lang(lang)
+        #log_lang(lang)
         divs = extract_divs(soup)
         thumbs,desc = thumbs_desc(divs)
         links = extract_links(desc)
         jamil = to_jamil(links,thumbs)
         final = scrape_articles(jamil)
         articles_to_csv(final,lang)
+        
     
-    print("Job is done")
+    print("Job is done.")
 
 #execute
 scrape_it()
